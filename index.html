@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tori Giles - The most beautiful girl in the world</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #290000;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      overflow-x: hidden; 
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 40px 20px 20px;
+      text-align: center;
+      border-bottom: 2px solid #3a3636;
+      position: relative;
+      z-index: 10;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: rgb(244, 252, 214);
+    }
+    header p {
+      font-size: 1.1em;
+      color: #a0cfff;
+      margin: 5px 0 20px;
+    }
+    nav {
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 10;
+    }
+    nav a {
+      color: rgb(244, 252, 214);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+      z-index: 10;
+    }
+    .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #111;
+      border-left: 4px solid #3a3636;
+      border-radius: 8px;
+    }
+    .section h2 {
+     color: rgb(244, 252, 214); 
+      margin-top: 0;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+    a {
+      color: #3399ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      border-top: 1px solid #222;
+      font-size: 0.9em;
+      background-color: #0d0d1a;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Loading bar container at top */
+    #loading-bar-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #3a3636;
+      z-index: 10000;
+    }
+
+    /* Loading bar itself */
+    #loading-bar {
+      height: 100%;
+      width: 0;
+      background-color: #3e0113; /* gold accent */
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loading-bar-container">
+    <div id="loading-bar"></div>
+  </div>
+
+  <header>
+      <h1>Home</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Links</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+  </header>
+
+  <div class="content">
+    <div class="section">
+      <h2>About Me</h2>
+      <p>The prettiest girl in the world. For real, she is so pretty I can't believe it.</p>
+    </div>
+
+    <div class="section">
+      <h2>What I Do</h2>
+      <ul>
+        <li>Save my boyfriend from his thoughts daily.</li>
+        <li>Be cute.</li>
+        <li>Greatest dancer of zumba and hip-hop.</li>
+        <li>Being the best girlfriend ever.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Email me: <a href="mailto:rayevittoriagiles@gmail.com">rayevittoriagiles@gmail.com</a></p>
+      <p>Want to see how cute I am??? No, never. I am only cute for my boyfriend.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Tori Giles. Made with love.
+  </footer>
+
+  <script>
+    const loadingBar = document.getElementById('loading-bar');
+    let width = 0;
+
+    const interval = setInterval(() => {
+      if (width >= 90) {
+        clearInterval(interval);
+      } else {
+        width += 10;
+        loadingBar.style.width = width + '%';
+      }
+    }, 200);
+
+
+    window.addEventListener('load', () => {
+      loadingBar.style.width = '100%';
+      setTimeout(() => {
+        const container = document.getElementById('loading-bar-container');
+        if (container) container.style.display = 'none';
+      }, 400);
+    });
+  </script>
+</body>
+</html>
